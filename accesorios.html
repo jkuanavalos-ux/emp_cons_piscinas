@@ -2,7 +2,7 @@
 <html lang="es"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Bañeras y Spa – Empório de las Piscinas</title>
+<title>Accesorios y Equipamiento – Empório de las Piscinas</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -12,9 +12,7 @@
   tailwind.config = {
     theme: { extend: {
       colors: {
-        "surface-variant":"#e0e3e5","surface-container-lowest":"#ffffff","primary-container":"#0a2540",
-        "on-surface-variant":"#43474d","surface":"#f7f9fb","secondary-container":"#67bafd",
-        "background":"#f7f9fb","on-background":"#191c1e","outline-variant":"#c4c6ce","outline":"#74777e"
+        "surface-variant":"#e0e3e5","on-surface-variant":"#43474d","outline-variant":"#c4c6ce","outline":"#74777e"
       },
       fontFamily: { "manrope":["Manrope","sans-serif"] }
     }}
@@ -33,8 +31,8 @@
     <a class="text-lg font-bold tracking-tighter text-[#0A2540] uppercase font-manrope" href="index.html">Empório de las Piscinas</a>
     <nav class="hidden md:flex items-center space-x-7">
       <a class="font-manrope text-sm font-medium text-[#0A2540] hover:text-[#00B4D8] transition-all" href="piscinas.html">Piscinas</a>
-      <a class="font-manrope text-sm font-semibold text-[#0077B6] border-b-2 border-[#0077B6] pb-0.5" href="baneras-spa.html">Bañeras y Spa</a>
-      <a class="font-manrope text-sm font-medium text-[#0A2540] hover:text-[#00B4D8] transition-all" href="accesorios.html">Accesorios</a>
+      <a class="font-manrope text-sm font-medium text-[#0A2540] hover:text-[#00B4D8] transition-all" href="baneras-spa.html">Bañeras y Spa</a>
+      <a class="font-manrope text-sm font-semibold text-[#0077B6] border-b-2 border-[#0077B6] pb-0.5" href="accesorios.html">Accesorios</a>
       <a class="font-manrope text-sm font-medium text-[#0A2540] hover:text-[#00B4D8] transition-all" href="index.html#galeria">Galería</a>
       <a class="font-manrope text-sm font-medium text-[#0A2540] hover:text-[#00B4D8] transition-all" href="index.html#contacto">Contacto</a>
     </nav>
@@ -48,187 +46,195 @@
 <main class="pt-[72px]">
 
 <!-- Hero -->
-<section class="relative min-h-[480px] flex items-center justify-center overflow-hidden bg-[#0A2540]">
+<section class="relative min-h-[420px] flex items-center justify-center overflow-hidden bg-[#0A2540]">
   <div class="absolute inset-0 z-0">
-    <img alt="Bañeras y spa de lujo" class="w-full h-full object-cover opacity-35" src="https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1600&q=80" loading="eager"/>
+    <img alt="Accesorios para piscinas" class="w-full h-full object-cover opacity-35" src="https://images.unsplash.com/photo-1754586697315-569a4134a9b4?auto=format&fit=crop&w=1600&q=80" loading="eager"/>
     <div class="absolute inset-0 bg-gradient-to-t from-[#0A2540] via-[#0A2540]/50 to-transparent"></div>
   </div>
-  <div class="relative z-10 max-w-[1280px] mx-auto px-8 w-full text-center py-20">
+  <div class="relative z-10 max-w-[1280px] mx-auto px-8 w-full text-center py-16">
     <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-6 text-white text-sm font-medium">
-      <span class="material-symbols-outlined text-[#00B4D8] text-sm">hot_tub</span>
-      Relax & Hidroterapia · Ciudad del Este
+      <span class="material-symbols-outlined text-[#00B4D8] text-sm">build_circle</span>
+      Equipamiento completo · Ciudad del Este
     </div>
     <h1 class="font-manrope font-bold text-4xl md:text-5xl text-white mb-5 max-w-3xl mx-auto leading-tight">
-      Bañeras, Spa y Jacuzzi
+      Accesorios y Equipamiento para Piscinas
     </h1>
     <p class="text-slate-300 text-lg max-w-2xl mx-auto mb-8">
-      Transformá tu hogar en un santuario de relax. Instalamos bañeras de hidromasaje, jacuzzis y spas para uso residencial y comercial.
+      Todo lo que necesitás para equipar, proteger y disfrutar tu piscina al máximo. Productos de calidad con asesoramiento técnico.
     </p>
     <a href="index.html#cotizacion" class="inline-flex items-center gap-2 px-8 py-4 bg-[#0077B6] hover:bg-[#00B4D8] text-white font-semibold rounded-lg transition-colors shadow-lg">
-      Consultá precios <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      Consultar disponibilidad <span class="material-symbols-outlined text-sm">arrow_forward</span>
     </a>
   </div>
 </section>
 
-<!-- Tipos de bañeras y spa -->
+<!-- Categorías de accesorios -->
 <section class="py-20 bg-[#f7f9fb]">
   <div class="max-w-[1280px] mx-auto px-8">
     <div class="text-center mb-14">
-      <span class="text-xs font-bold uppercase tracking-widest text-[#0077B6] block mb-3">Catálogo completo</span>
-      <h2 class="font-manrope font-bold text-3xl text-[#191c1e] mb-4">Tipos de Bañeras y Spa que ofrecemos</h2>
-      <p class="text-[#43474d] max-w-2xl mx-auto">Desde modelos portátiles hasta instalaciones de lujo empotradas. Tenemos la opción ideal para tu espacio y presupuesto.</p>
+      <span class="text-xs font-bold uppercase tracking-widest text-[#0077B6] block mb-3">Catálogo de productos</span>
+      <h2 class="font-manrope font-bold text-3xl text-[#191c1e] mb-4">Todo para tu piscina en un solo lugar</h2>
+      <p class="text-[#43474d] max-w-2xl mx-auto">Desde iluminación premium hasta sistemas de filtración avanzados. Asesoramos la elección correcta para cada proyecto.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <!-- Hidromasaje -->
-      <div class="bg-white border border-[#e0e3e5] rounded-2xl p-8 hover:shadow-[0_12px_40px_rgba(10,37,64,0.10)] hover:-translate-y-1 transition-all duration-300">
-        <div class="w-14 h-14 bg-[#0077B6] rounded-2xl flex items-center justify-center mb-6">
-          <span class="material-symbols-outlined text-white text-3xl">hot_tub</span>
+      <!-- Iluminación -->
+      <div class="bg-white border border-[#e0e3e5] rounded-2xl overflow-hidden hover:shadow-[0_12px_40px_rgba(10,37,64,0.10)] hover:-translate-y-1 transition-all duration-300 group">
+        <div class="h-10 bg-gradient-to-r from-[#0A2540] to-[#0077B6] flex items-center px-6">
+          <span class="material-symbols-outlined text-[#00B4D8] mr-2">lightbulb</span>
+          <span class="text-white text-xs font-bold uppercase tracking-widest">Iluminación</span>
         </div>
-        <h3 class="font-manrope font-bold text-xl text-[#191c1e] mb-3">Bañera de Hidromasaje</h3>
-        <p class="text-[#43474d] text-sm leading-relaxed mb-5">Jets de agua a presión para masajes terapéuticos. Ideal para uso diario. Modelos para 1 a 4 personas con sistemas de calefacción incluidos.</p>
-        <ul class="space-y-2 text-sm text-[#43474d] mb-6">
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Jets regulables de alta presión</li>
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Sistema de calefacción integrado</li>
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Control digital de temperatura</li>
-        </ul>
-        <a href="index.html#cotizacion" class="inline-flex items-center gap-1 text-[#0077B6] hover:text-[#00B4D8] text-sm font-semibold transition-colors">Cotizar <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+        <div class="p-8">
+          <h3 class="font-manrope font-bold text-xl text-[#191c1e] mb-3">Iluminación LED Subacuática</h3>
+          <p class="text-[#43474d] text-sm leading-relaxed mb-5">Luces RGB y blancas de alto rendimiento para transformar tu piscina en un espectáculo nocturno. Bajo consumo y larga vida útil.</p>
+          <ul class="space-y-2 text-sm text-[#43474d] mb-6">
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>LED RGB multicolor o blanco frío/cálido</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Control remoto y programación</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Resistente a agentes químicos</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Instalación profesional incluida</li>
+          </ul>
+          <a href="index.html#cotizacion" class="inline-flex items-center gap-1 text-[#0077B6] hover:text-[#00B4D8] text-sm font-semibold transition-colors">
+            Consultar precio <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+        </div>
       </div>
 
-      <!-- Portable -->
-      <div class="bg-white border border-[#e0e3e5] rounded-2xl p-8 hover:shadow-[0_12px_40px_rgba(10,37,64,0.10)] hover:-translate-y-1 transition-all duration-300">
-        <div class="w-14 h-14 bg-[#0077B6] rounded-2xl flex items-center justify-center mb-6">
-          <span class="material-symbols-outlined text-white text-3xl">local_shipping</span>
+      <!-- Escaleras -->
+      <div class="bg-white border border-[#e0e3e5] rounded-2xl overflow-hidden hover:shadow-[0_12px_40px_rgba(10,37,64,0.10)] hover:-translate-y-1 transition-all duration-300">
+        <div class="h-10 bg-gradient-to-r from-[#0A2540] to-[#0077B6] flex items-center px-6">
+          <span class="material-symbols-outlined text-[#00B4D8] mr-2">stairs</span>
+          <span class="text-white text-xs font-bold uppercase tracking-widest">Escaleras</span>
         </div>
-        <h3 class="font-manrope font-bold text-xl text-[#191c1e] mb-3">Spa Portátil (Inflable)</h3>
-        <p class="text-[#43474d] text-sm leading-relaxed mb-5">La opción más accesible. Instalación en minutos, sin obras. Puede ubicarse en terraza, jardín o interior. Capacidad hasta 6 personas.</p>
-        <ul class="space-y-2 text-sm text-[#43474d] mb-6">
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Sin instalación ni obra</li>
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Listo en menos de 30 minutos</li>
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Sistema de burbujas y jets</li>
-        </ul>
-        <a href="index.html#cotizacion" class="inline-flex items-center gap-1 text-[#0077B6] hover:text-[#00B4D8] text-sm font-semibold transition-colors">Cotizar <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+        <div class="p-8">
+          <h3 class="font-manrope font-bold text-xl text-[#191c1e] mb-3">Escaleras y Pasamanos</h3>
+          <p class="text-[#43474d] text-sm leading-relaxed mb-5">Escaleras de acero inoxidable 316L o ABS de alta resistencia. Disponibles en varios modelos: de apoyo, de empotrar y escalones integrados.</p>
+          <ul class="space-y-2 text-sm text-[#43474d] mb-6">
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Acero inoxidable AISI 316L marino</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Modelos 2, 3 y 4 peldaños</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Con o sin antideslizante</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Pasamanos a medida disponibles</li>
+          </ul>
+          <a href="index.html#cotizacion" class="inline-flex items-center gap-1 text-[#0077B6] hover:text-[#00B4D8] text-sm font-semibold transition-colors">
+            Consultar precio <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+        </div>
       </div>
 
-      <!-- Empotrado -->
-      <div class="bg-white border-2 border-[#0077B6] rounded-2xl p-8 hover:shadow-[0_12px_40px_rgba(0,119,182,0.18)] hover:-translate-y-1 transition-all duration-300 relative">
-        <div class="absolute top-4 right-4 bg-[#0077B6] text-white text-xs font-bold px-3 py-1 rounded-full">PREMIUM</div>
-        <div class="w-14 h-14 bg-[#0077B6] rounded-2xl flex items-center justify-center mb-6">
-          <span class="material-symbols-outlined text-white text-3xl">bathtub</span>
+      <!-- Cobertores -->
+      <div class="bg-white border-2 border-[#0077B6] rounded-2xl overflow-hidden hover:shadow-[0_12px_40px_rgba(0,119,182,0.15)] hover:-translate-y-1 transition-all duration-300 relative">
+        <div class="absolute top-12 right-4 bg-[#0077B6] text-white text-xs font-bold px-3 py-1 rounded-full">RECOMENDADO</div>
+        <div class="h-10 bg-gradient-to-r from-[#0077B6] to-[#00B4D8] flex items-center px-6">
+          <span class="material-symbols-outlined text-white mr-2">shield</span>
+          <span class="text-white text-xs font-bold uppercase tracking-widest">Protección</span>
         </div>
-        <h3 class="font-manrope font-bold text-xl text-[#191c1e] mb-3">Spa Empotrado</h3>
-        <p class="text-[#43474d] text-sm leading-relaxed mb-5">Instalación permanente encastrada en el suelo o en deck. Diseño de lujo integrado al entorno. Sistemas avanzados de filtración y calefacción.</p>
-        <ul class="space-y-2 text-sm text-[#43474d] mb-6">
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Integrado al diseño del espacio</li>
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Sistema de filtración avanzado</li>
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Iluminación LED y cromoterapia</li>
-        </ul>
-        <a href="index.html#cotizacion" class="inline-flex items-center gap-1 text-[#0077B6] hover:text-[#00B4D8] text-sm font-semibold transition-colors">Cotizar <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+        <div class="p-8">
+          <h3 class="font-manrope font-bold text-xl text-[#191c1e] mb-3">Cobertores y Tapas</h3>
+          <p class="text-[#43474d] text-sm leading-relaxed mb-5">Protegé tu piscina del polvo, hojas y animales. Reducen la evaporación hasta un 95% y mantienen la temperatura del agua.</p>
+          <ul class="space-y-2 text-sm text-[#43474d] mb-6">
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Cobertor de burbujas solar</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Cobertor de seguridad con anclaje</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Automatizado con motor eléctrico</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>A medida para cualquier forma</li>
+          </ul>
+          <a href="index.html#cotizacion" class="inline-flex items-center gap-1 text-[#0077B6] hover:text-[#00B4D8] text-sm font-semibold transition-colors">
+            Consultar precio <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+        </div>
       </div>
 
-      <!-- Madera / Bañera de tina -->
-      <div class="bg-white border border-[#e0e3e5] rounded-2xl p-8 hover:shadow-[0_12px_40px_rgba(10,37,64,0.10)] hover:-translate-y-1 transition-all duration-300">
-        <div class="w-14 h-14 bg-[#0077B6] rounded-2xl flex items-center justify-center mb-6">
-          <span class="material-symbols-outlined text-white text-3xl">forest</span>
+      <!-- Calefacción -->
+      <div class="bg-white border border-[#e0e3e5] rounded-2xl overflow-hidden hover:shadow-[0_12px_40px_rgba(10,37,64,0.10)] hover:-translate-y-1 transition-all duration-300">
+        <div class="h-10 bg-gradient-to-r from-[#0A2540] to-[#0077B6] flex items-center px-6">
+          <span class="material-symbols-outlined text-[#00B4D8] mr-2">thermostat</span>
+          <span class="text-white text-xs font-bold uppercase tracking-widest">Calefacción</span>
         </div>
-        <h3 class="font-manrope font-bold text-xl text-[#191c1e] mb-3">Tina de Madera (Nordic)</h3>
-        <p class="text-[#43474d] text-sm leading-relaxed mb-5">Bañera nórdica de madera calentada con leña o eléctrica. Experiencia única de spa al aire libre. Ideal para jardines y propiedades rústicas.</p>
-        <ul class="space-y-2 text-sm text-[#43474d] mb-6">
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Madera tratada resistente al agua</li>
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Calentamiento a leña o eléctrico</li>
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Estética natural premium</li>
-        </ul>
-        <a href="index.html#cotizacion" class="inline-flex items-center gap-1 text-[#0077B6] hover:text-[#00B4D8] text-sm font-semibold transition-colors">Cotizar <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+        <div class="p-8">
+          <h3 class="font-manrope font-bold text-xl text-[#191c1e] mb-3">Calefacción de Agua</h3>
+          <p class="text-[#43474d] text-sm leading-relaxed mb-5">Disfruta tu piscina todo el año. Calentadores eléctricos, a gas y bombas de calor para todo tipo de piscinas y climas.</p>
+          <ul class="space-y-2 text-sm text-[#43474d] mb-6">
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Bomba de calor (bajo consumo)</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Calentador eléctrico en línea</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Colector solar térmico</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Termostato de control digital</li>
+          </ul>
+          <a href="index.html#cotizacion" class="inline-flex items-center gap-1 text-[#0077B6] hover:text-[#00B4D8] text-sm font-semibold transition-colors">
+            Consultar precio <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+        </div>
       </div>
 
-      <!-- Free Standing -->
-      <div class="bg-white border border-[#e0e3e5] rounded-2xl p-8 hover:shadow-[0_12px_40px_rgba(10,37,64,0.10)] hover:-translate-y-1 transition-all duration-300">
-        <div class="w-14 h-14 bg-[#0077B6] rounded-2xl flex items-center justify-center mb-6">
-          <span class="material-symbols-outlined text-white text-3xl">spa</span>
+      <!-- Robots limpiadores -->
+      <div class="bg-white border border-[#e0e3e5] rounded-2xl overflow-hidden hover:shadow-[0_12px_40px_rgba(10,37,64,0.10)] hover:-translate-y-1 transition-all duration-300">
+        <div class="h-10 bg-gradient-to-r from-[#0A2540] to-[#0077B6] flex items-center px-6">
+          <span class="material-symbols-outlined text-[#00B4D8] mr-2">smart_toy</span>
+          <span class="text-white text-xs font-bold uppercase tracking-widest">Limpieza automática</span>
         </div>
-        <h3 class="font-manrope font-bold text-xl text-[#191c1e] mb-3">Bañera Free Standing</h3>
-        <p class="text-[#43474d] text-sm leading-relaxed mb-5">Diseño autoportante de acrílico o fibra de vidrio. Elemento decorativo y funcional para baños de lujo. Disponible con opción de hidromasaje.</p>
-        <ul class="space-y-2 text-sm text-[#43474d] mb-6">
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Diseño premium autoportante</li>
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Opción con jets de hidromasaje</li>
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Variedad de formas y colores</li>
-        </ul>
-        <a href="index.html#cotizacion" class="inline-flex items-center gap-1 text-[#0077B6] hover:text-[#00B4D8] text-sm font-semibold transition-colors">Cotizar <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+        <div class="p-8">
+          <h3 class="font-manrope font-bold text-xl text-[#191c1e] mb-3">Robots Limpiadores</h3>
+          <p class="text-[#43474d] text-sm leading-relaxed mb-5">Limpieza automática del fondo, paredes y línea de flotación. Ahorrá tiempo y productos químicos. Funciona de forma autónoma.</p>
+          <ul class="space-y-2 text-sm text-[#43474d] mb-6">
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Limpia fondo + paredes</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Control por app o mando</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Filtración de alta eficiencia</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Para piscinas hasta 15x8m</li>
+          </ul>
+          <a href="index.html#cotizacion" class="inline-flex items-center gap-1 text-[#0077B6] hover:text-[#00B4D8] text-sm font-semibold transition-colors">
+            Consultar precio <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+        </div>
       </div>
 
-      <!-- Jacuzzi exterior -->
-      <div class="bg-white border border-[#e0e3e5] rounded-2xl p-8 hover:shadow-[0_12px_40px_rgba(10,37,64,0.10)] hover:-translate-y-1 transition-all duration-300">
-        <div class="w-14 h-14 bg-[#0077B6] rounded-2xl flex items-center justify-center mb-6">
-          <span class="material-symbols-outlined text-white text-3xl">pool</span>
+      <!-- Filtros y bombas -->
+      <div class="bg-white border border-[#e0e3e5] rounded-2xl overflow-hidden hover:shadow-[0_12px_40px_rgba(10,37,64,0.10)] hover:-translate-y-1 transition-all duration-300">
+        <div class="h-10 bg-gradient-to-r from-[#0A2540] to-[#0077B6] flex items-center px-6">
+          <span class="material-symbols-outlined text-[#00B4D8] mr-2">water_pump</span>
+          <span class="text-white text-xs font-bold uppercase tracking-widest">Filtración</span>
         </div>
-        <h3 class="font-manrope font-bold text-xl text-[#191c1e] mb-3">Jacuzzi Exterior</h3>
-        <p class="text-[#43474d] text-sm leading-relaxed mb-5">Jacuzzi de exterior resistente a la intemperie. Perfecto para terrazas, jardines o junto a la piscina. Sistemas de climatización para usar en cualquier época.</p>
-        <ul class="space-y-2 text-sm text-[#43474d] mb-6">
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Resistente a la intemperie</li>
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Ideal junto a la piscina</li>
-          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Disponible con cubierta</li>
-        </ul>
-        <a href="index.html#cotizacion" class="inline-flex items-center gap-1 text-[#0077B6] hover:text-[#00B4D8] text-sm font-semibold transition-colors">Cotizar <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+        <div class="p-8">
+          <h3 class="font-manrope font-bold text-xl text-[#191c1e] mb-3">Bombas y Filtros</h3>
+          <p class="text-[#43474d] text-sm leading-relaxed mb-5">El corazón de tu piscina. Bombas de circulación de bajo consumo y filtros de arena, cartucho o diatomea para agua siempre cristalina.</p>
+          <ul class="space-y-2 text-sm text-[#43474d] mb-6">
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Bombas monofásicas y trifásicas</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Filtros de arena multimedia</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Prefiltros y skimmers</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Asesoría en capacidad correcta</li>
+          </ul>
+          <a href="mantenimiento.html" class="inline-flex items-center gap-1 text-[#0077B6] hover:text-[#00B4D8] text-sm font-semibold transition-colors">
+            Ver productos de mantenimiento <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Beneficios / Por qué elegir -->
-<section class="py-16 bg-[#0A2540]">
+<!-- Banner mantenimiento -->
+<section class="py-14 bg-[#0A2540]">
   <div class="max-w-[1280px] mx-auto px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-8">
       <div>
-        <span class="text-xs font-bold uppercase tracking-widest text-[#00B4D8] block mb-3">Por qué instalarlo</span>
-        <h2 class="font-manrope font-bold text-3xl text-white mb-6">Los beneficios del spa en tu hogar</h2>
-        <div class="space-y-5">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 bg-[#0077B6] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-              <span class="material-symbols-outlined text-white text-base">self_improvement</span>
-            </div>
-            <div>
-              <h4 class="font-manrope font-semibold text-white mb-1">Alivio del estrés y dolor muscular</h4>
-              <p class="text-slate-300 text-sm">Los jets de agua caliente reducen tensión muscular y mejoran la circulación. Ideal tras jornadas largas.</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 bg-[#0077B6] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-              <span class="material-symbols-outlined text-white text-base">nights_stay</span>
-            </div>
-            <div>
-              <h4 class="font-manrope font-semibold text-white mb-1">Mejor calidad del sueño</h4>
-              <p class="text-slate-300 text-sm">Una sesión de 15–20 minutos en agua caliente antes de dormir mejora significativamente la calidad del sueño.</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 bg-[#0077B6] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-              <span class="material-symbols-outlined text-white text-base">home</span>
-            </div>
-            <div>
-              <h4 class="font-manrope font-semibold text-white mb-1">Valor agregado a tu propiedad</h4>
-              <p class="text-slate-300 text-sm">Un spa bien instalado aumenta el valor comercial y el atractivo de tu hogar.</p>
-            </div>
-          </div>
-        </div>
+        <span class="text-xs font-bold uppercase tracking-widest text-[#00B4D8] block mb-2">¿Necesitás repuestos o químicos?</span>
+        <h2 class="font-manrope font-bold text-2xl text-white mb-2">Sección de Mantenimiento</h2>
+        <p class="text-slate-300 text-sm max-w-xl">Encontrá bombas, piezas de repuesto y tratamientos químicos para mantener el agua en perfectas condiciones.</p>
       </div>
-      <div class="rounded-2xl overflow-hidden aspect-[4/3]">
-        <img src="https://images.unsplash.com/photo-1714572878219-d0d72a11e998?auto=format&fit=crop&w=800&q=80" alt="Spa iluminado de noche" class="w-full h-full object-cover" loading="lazy"/>
-      </div>
+      <a href="mantenimiento.html" class="flex-shrink-0 inline-flex items-center gap-2 px-8 py-4 bg-[#0077B6] hover:bg-[#00B4D8] text-white font-semibold rounded-lg transition-colors shadow-lg whitespace-nowrap">
+        Ver productos <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      </a>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="py-16 bg-[#f7f9fb] border-y border-[#e0e3e5]">
+<section class="py-16 bg-white border-y border-[#e0e3e5]">
   <div class="max-w-3xl mx-auto px-8 text-center">
-    <h2 class="font-manrope font-bold text-3xl text-[#191c1e] mb-4">¿Qué tipo de spa se adapta a tu hogar?</h2>
-    <p class="text-[#43474d] mb-8">Te asesoramos sin compromiso. Consultanos por WhatsApp o pedí tu cotización gratis.</p>
+    <h2 class="font-manrope font-bold text-3xl text-[#191c1e] mb-4">¿No encontrás lo que buscás?</h2>
+    <p class="text-[#43474d] mb-8">Consultanos. Tenemos acceso a una amplia variedad de marcas y modelos no listados aquí.</p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a href="index.html#cotizacion" class="px-8 py-4 bg-[#0077B6] hover:bg-[#00B4D8] text-white font-semibold rounded-lg transition-colors shadow-lg inline-flex items-center justify-center gap-2">
         Cotización gratis <span class="material-symbols-outlined text-sm">arrow_forward</span>
       </a>
-      <a href="https://wa.me/595973744427?text=Hola%2C%20me%20interesa%20una%20ba%C3%B1era%20o%20spa.%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" class="px-8 py-4 bg-[#25D366] hover:bg-[#1da851] text-white font-semibold rounded-lg transition-colors inline-flex items-center justify-center gap-2">
+      <a href="https://wa.me/595973744427?text=Hola%2C%20busco%20un%20accesorio%20para%20piscina%20y%20quisiera%20consultar%20disponibilidad." target="_blank" class="px-8 py-4 bg-[#25D366] hover:bg-[#1da851] text-white font-semibold rounded-lg transition-colors inline-flex items-center justify-center gap-2">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Consultar por WhatsApp
       </a>
@@ -329,8 +335,8 @@
   </button>
   <nav class="flex flex-col space-y-5">
     <a href="piscinas.html" class="font-manrope text-lg font-medium text-[#0A2540] hover:text-[#0077B6]">Piscinas</a>
-    <a href="baneras-spa.html" class="font-manrope text-lg font-semibold text-[#0077B6]">Bañeras y Spa</a>
-    <a href="accesorios.html" class="font-manrope text-lg font-medium text-[#0A2540] hover:text-[#0077B6]">Accesorios</a>
+    <a href="baneras-spa.html" class="font-manrope text-lg font-medium text-[#0A2540] hover:text-[#0077B6]">Bañeras y Spa</a>
+    <a href="accesorios.html" class="font-manrope text-lg font-semibold text-[#0077B6]">Accesorios</a>
     <a href="index.html#galeria" class="font-manrope text-lg font-medium text-[#0A2540] hover:text-[#0077B6]">Galería</a>
     <a href="index.html#contacto" class="font-manrope text-lg font-medium text-[#0A2540] hover:text-[#0077B6]">Contacto</a>
     <a href="index.html#cotizacion" class="mt-4 inline-flex items-center justify-center px-6 py-3 bg-[#0077B6] text-white font-medium rounded-lg hover:bg-[#00B4D8] transition-colors text-center">
