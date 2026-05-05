@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Empório de las Piscinas - Ciudad del Este</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-variant": "#e0e3e5","surface-container-lowest": "#ffffff","primary-container": "#0a2540",
+          "surface-tint": "#49607e","on-surface-variant": "#43474d","surface": "#f7f9fb",
+          "on-secondary-fixed-variant": "#004b74","secondary": "#006399","outline-variant": "#c4c6ce",
+          "surface-container-high": "#e6e8ea","on-error-container": "#93000a","on-background": "#191c1e",
+          "surface-container": "#eceef0","primary-fixed": "#d2e4ff","tertiary-container": "#002832",
+          "secondary-container": "#67bafd","on-error": "#ffffff","on-tertiary": "#ffffff",
+          "on-surface": "#191c1e","tertiary-fixed": "#b3ebff","on-secondary": "#ffffff",
+          "background": "#f7f9fb","on-secondary-fixed": "#001d32","secondary-fixed": "#cde5ff",
+          "surface-bright": "#f7f9fb","on-secondary-container": "#004972","inverse-surface": "#2d3133",
+          "on-primary-fixed": "#001c37","tertiary-fixed-dim": "#4cd6fb","error-container": "#ffdad6",
+          "primary": "#000f22","secondary-fixed-dim": "#94ccff","on-tertiary-container": "#0098b7",
+          "on-tertiary-fixed-variant": "#004e5f","tertiary": "#001116","primary-fixed-dim": "#b0c8eb",
+          "outline": "#74777e","surface-container-highest": "#e0e3e5","on-tertiary-fixed": "#001f27",
+          "inverse-primary": "#b0c8eb","surface-dim": "#d8dadc","on-primary-container": "#768dad",
+          "on-primary": "#ffffff","surface-container-low": "#f2f4f6","inverse-on-surface": "#eff1f3",
+          "error": "#ba1a1a","on-primary-fixed-variant": "#314865"
+        },
+        "borderRadius": { "DEFAULT": "0.125rem","lg": "0.25rem","xl": "0.5rem","full": "0.75rem" },
+        "spacing": {
+          "container-max": "1280px","section-padding": "80px","stack-lg": "32px",
+          "margin-desktop": "40px","stack-md": "16px","margin-mobile": "16px","gutter": "24px","unit": "8px","stack-sm": "8px"
+        },
+        "fontFamily": {
+          "headline-md": ["Manrope"],"label-caps": ["Inter"],"body-md": ["Inter"],
+          "headline-lg": ["Manrope"],"body-lg": ["Inter"],"headline-display": ["Manrope"],"button": ["Inter"]
+        },
+        "fontSize": {
+          "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+          "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700" }],
+          "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+          "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+          "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+          "headline-display": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+          "button": ["15px", { "lineHeight": "1.0", "fontWeight": "600" }]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  h1,h2,h3,h4,h5,h6,.font-manrope { font-family: 'Manrope', sans-serif; }
+  .gallery-item img { transition: transform 0.5s ease; }
+  .faq-icon { transition: transform 0.3s ease; }
+</style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+
+<!-- 1. TopAppBar -->
+<header class="bg-white/95 dark:bg-slate-900/95 backdrop-blur-md fixed top-0 w-full z-[100] border-b border-slate-100 shadow-[0_2px_15px_-3px_rgba(10,37,64,0.07)]">
+  <div class="max-w-[1280px] mx-auto px-8 py-4 flex items-center justify-between">
+    <a class="text-lg font-bold tracking-tighter text-[#0A2540] uppercase" href="#">Empório de las Piscinas</a>
+    <nav class="hidden md:flex items-center space-x-7">
+      <a class="font-manrope text-sm font-medium text-[#0A2540] hover:text-[#00B4D8] transition-all" href="#servicios">Servicios</a>
+      <a class="font-manrope text-sm font-medium text-[#0A2540] hover:text-[#00B4D8] transition-all" href="#galeria">Galería</a>
+      <a class="font-manrope text-sm font-medium text-[#0A2540] hover:text-[#00B4D8] transition-all" href="#comotrabajamos">Cómo trabajamos</a>
+      <a class="font-manrope text-sm font-medium text-[#0A2540] hover:text-[#00B4D8] transition-all" href="#testimonios">Testimonios</a>
+      <a class="font-manrope text-sm font-medium text-[#0A2540] hover:text-[#00B4D8] transition-all" href="#faq">FAQ</a>
+      <a class="font-manrope text-sm font-medium text-[#0A2540] hover:text-[#00B4D8] transition-all" href="#contacto">Contacto</a>
+    </nav>
+    <a class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-[#0A2540] text-white font-button text-button rounded hover:bg-[#0077B6] transition-colors active:scale-95 transform" href="#cotizacion">
+      Pedir cotización gratis
+    </a>
+    <button id="menu-btn" class="md:hidden text-[#0A2540]"><span class="material-symbols-outlined">menu</span></button>
+  </div>
+</header>
+
+<main class="pt-[72px]">
+
+<!-- 2. Hero -->
+<section class="relative min-h-[819px] flex items-center justify-center overflow-hidden bg-primary-container">
+  <div class="absolute inset-0 z-0">
+    <img alt="Luxury pool installation" class="w-full h-full object-cover opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5Hj7dG6D0aosax5Y7yPXcavRt0jDgFwLVU1oqIcn8WNBtxS8dkd9lKGllwEVvBOFWBDtztT7ehcqqjk-VEA9iVfuvxOQIZAUXLeb5J1rA64hDn9d4IM2leGADoW_VCJRS-5u3Vxmx1rKlfUytsddaGaCSUgIWQmTcdsOaxfbdxyc60TJ-QCuJ0CzwNFdJnXr6obcA0kaIVQAkg5vYcMxoaAUpyqr6hxm6mMCvrB7M7UdbNd-0dNiO8WA99akMU3Eqh2P4X_Zp6EWl"/>
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0A2540] via-[#0A2540]/60 to-transparent"></div>
+  </div>
+  <div class="relative z-10 max-w-[1280px] mx-auto px-8 w-full text-center">
+    <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full mb-8 text-white text-sm font-medium">
+      <span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+      4.9 en Google · <span class="material-symbols-outlined text-green-400 text-sm">verified</span> Empresa verificada · <span class="material-symbols-outlined text-white text-sm">location_on</span> Ciudad del Este
+    </div>
+    <h1 class="font-headline-display text-headline-display text-white mb-6 max-w-4xl mx-auto drop-shadow-lg">
+      Tu piscina soñada, construida por expertos en Ciudad del Este
+    </h1>
+    <p class="font-body-lg text-body-lg text-surface-container-low mb-10 max-w-2xl mx-auto drop-shadow">
+      Instalamos piscinas de hormigón, fibra y vinilo con garantía de calidad. +10 años de experiencia.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a class="w-full sm:w-auto px-8 py-4 bg-[#0077B6] hover:bg-[#00B4D8] text-white font-button text-button rounded-lg transition-colors shadow-lg" href="#cotizacion">Quiero mi cotización gratis</a>
+      <a class="w-full sm:w-auto px-8 py-4 bg-transparent border border-white text-white hover:bg-white/10 font-button text-button rounded-lg transition-colors" href="#galeria">Ver galería de trabajos</a>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Credentials Bar -->
+<section class="bg-surface-container-lowest border-b border-surface-variant py-6">
+  <div class="max-w-[1280px] mx-auto px-8 flex flex-wrap justify-center sm:justify-between items-center gap-6">
+    <div class="flex items-center gap-2 text-on-surface font-body-md text-body-md font-medium">
+      <span class="material-symbols-outlined text-[#0077B6]">pool</span><span>+200 piscinas instaladas</span>
+    </div>
+    <div class="flex items-center gap-2 text-on-surface font-body-md text-body-md font-medium">
+      <span class="material-symbols-outlined text-yellow-500">star</span><span>4.9/5 en Google</span>
+    </div>
+    <div class="flex items-center gap-2 text-on-surface font-body-md text-body-md font-medium">
+      <span class="material-symbols-outlined text-[#0077B6]">calendar_month</span><span>+10 años de experiencia</span>
+    </div>
+    <div class="flex items-center gap-2 text-on-surface font-body-md text-body-md font-medium">
+      <span class="material-symbols-outlined text-green-600">verified_user</span><span>Garantía de construcción</span>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Services -->
+<section class="py-[80px] bg-background" id="servicios">
+  <div class="max-w-[1280px] mx-auto px-8">
+    <div class="text-center mb-14">
+      <span class="font-label-caps text-label-caps text-[#0077B6] uppercase block mb-3">Tipos de piscina</span>
+      <h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Elegí el tipo de piscina ideal para vos</h2>
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Materiales de primera calidad, diseño experto y asesoramiento personalizado para cada proyecto.</p>
+    </div>
+
+    <!-- 3 tipos principales -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+      <div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-8 hover:shadow-[0_8px_30px_rgb(10,37,64,0.10)] hover:-translate-y-1 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#0077B6]/10 rounded-full flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-[#0077B6] text-3xl">architecture</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md text-on-background mb-3">Hormigón Armado</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-5">La más duradera y 100% personalizable. Cualquier forma, tamaño y profundidad. Ideal para proyectos únicos. Plazo: 4–6 semanas.</p>
+        <ul class="space-y-2 text-sm text-on-surface-variant">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Forma y tamaño totalmente a medida</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Infinity Edge y escalones integrados</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Mayor vida útil y resistencia</li>
+        </ul>
+      </div>
+      <div class="bg-surface-container-lowest border-2 border-[#0077B6] rounded-xl p-8 hover:shadow-[0_8px_30px_rgb(0,119,182,0.15)] hover:-translate-y-1 transition-all duration-300 relative">
+        <div class="absolute top-4 right-4 bg-[#0077B6] text-white text-xs font-bold px-3 py-1 rounded-full">MÁS POPULAR</div>
+        <div class="w-12 h-12 bg-[#0077B6]/10 rounded-full flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-[#0077B6] text-3xl">speed</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md text-on-background mb-3">Fibra de Vidrio</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-5">Instalación express en 3–7 días. Superficie gelcoat suave, anti-algas y de fácil mantenimiento. Modelos en stock listos para instalar.</p>
+        <ul class="space-y-2 text-sm text-on-surface-variant">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Instalación en días, no semanas</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Superficie gelcoat suave y duradera</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Bajo costo de mantenimiento</li>
+        </ul>
+      </div>
+      <div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-8 hover:shadow-[0_8px_30px_rgb(10,37,64,0.10)] hover:-translate-y-1 transition-all duration-300">
+        <div class="w-12 h-12 bg-[#0077B6]/10 rounded-full flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-[#0077B6] text-3xl">water_drop</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md text-on-background mb-3">Revestimiento Vinilo</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-5">Opción económica y versátil. Liner de vinilo con decenas de estampados. Apta también para renovación de piscinas existentes. Plazo: 1–2 semanas.</p>
+        <ul class="space-y-2 text-sm text-on-surface-variant">
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Precio accesible y competitivo</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Decenas de diseños disponibles</li>
+          <li class="flex items-center gap-2"><span class="material-symbols-outlined text-green-500 text-base">check_circle</span>Apto para renovación de piscina existente</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Características especiales -->
+    <div class="text-center mb-8">
+      <h3 class="font-headline-md text-headline-md text-on-background">Características y estilos especiales</h3>
+      <p class="text-sm text-on-surface-variant mt-2">Personalizamos tu piscina con estas opciones adicionales</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
+      <div class="bg-gradient-to-b from-[#e8f4fd] to-white border border-[#b3d8f0] rounded-xl p-6 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+        <div class="w-10 h-10 bg-[#0077B6] rounded-full flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined text-white text-xl">waves</span>
+        </div>
+        <h4 class="font-semibold text-on-background mb-2">Infinity Edge</h4>
+        <p class="text-sm text-on-surface-variant">Borde de desborde visual con efecto espejo. Ideal para propiedades con vista elevada o jardines amplios.</p>
+      </div>
+      <div class="bg-gradient-to-b from-[#e8f4fd] to-white border border-[#b3d8f0] rounded-xl p-6 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+        <div class="w-10 h-10 bg-[#0077B6] rounded-full flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined text-white text-xl">water</span>
+        </div>
+        <h4 class="font-semibold text-on-background mb-2">Cascadas y fuentes</h4>
+        <p class="text-sm text-on-surface-variant">Cascadas de pared, de roca artificial o láminas de agua integradas para un ambiente relajante y spa.</p>
+      </div>
+      <div class="bg-gradient-to-b from-[#e8f4fd] to-white border border-[#b3d8f0] rounded-xl p-6 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+        <div class="w-10 h-10 bg-[#0077B6] rounded-full flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined text-white text-xl">lightbulb</span>
+        </div>
+        <h4 class="font-semibold text-on-background mb-2">Iluminación LED</h4>
+        <p class="text-sm text-on-surface-variant">Luces subacuáticas RGB o blancas. Tu piscina de noche se convierte en un espectáculo único.</p>
+      </div>
+      <div class="bg-gradient-to-b from-[#e8f4fd] to-white border border-[#b3d8f0] rounded-xl p-6 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+        <div class="w-10 h-10 bg-[#0077B6] rounded-full flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined text-white text-xl">hot_tub</span>
+        </div>
+        <h4 class="font-semibold text-on-background mb-2">Spa / Jacuzzi</h4>
+        <p class="text-sm text-on-surface-variant">Zona de hidroterapia con jets de agua caliente, integrada a la piscina o como unidad independiente.</p>
+      </div>
+      <div class="bg-gradient-to-b from-[#e8f4fd] to-white border border-[#b3d8f0] rounded-xl p-6 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+        <div class="w-10 h-10 bg-[#0077B6] rounded-full flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined text-white text-xl">deck</span>
+        </div>
+        <h4 class="font-semibold text-on-background mb-2">Deck y solarium</h4>
+        <p class="text-sm text-on-surface-variant">Deck de madera, PVC o porcellanato alrededor de la piscina. Espacio completo para disfrutar.</p>
+      </div>
+      <div class="bg-gradient-to-b from-[#e8f4fd] to-white border border-[#b3d8f0] rounded-xl p-6 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+        <div class="w-10 h-10 bg-[#0077B6] rounded-full flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined text-white text-xl">layers</span>
+        </div>
+        <h4 class="font-semibold text-on-background mb-2">Piscina elevada</h4>
+        <p class="text-sm text-on-surface-variant">Construcción sobre el nivel del suelo. Solución ideal para terrenos con pendiente o sin posibilidad de excavación.</p>
+      </div>
+      <div class="bg-gradient-to-b from-[#e8f4fd] to-white border border-[#b3d8f0] rounded-xl p-6 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+        <div class="w-10 h-10 bg-[#0077B6] rounded-full flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined text-white text-xl">grid_on</span>
+        </div>
+        <h4 class="font-semibold text-on-background mb-2">Azulejo y cerámico</h4>
+        <p class="text-sm text-on-surface-variant">Revestimiento en cerámico, mosaico o porcellanato. Acabados premium con diseños únicos y elegantes.</p>
+      </div>
+      <div class="bg-gradient-to-b from-[#e8f4fd] to-white border border-[#b3d8f0] rounded-xl p-6 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+        <div class="w-10 h-10 bg-[#0077B6] rounded-full flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined text-white text-xl">construction</span>
+        </div>
+        <h4 class="font-semibold text-on-background mb-2">Renovación y reforma</h4>
+        <p class="text-sm text-on-surface-variant">Renovamos piscinas antiguas: cambio de revestimiento, sellado de fisuras y modernización completa.</p>
+      </div>
+    </div>
+
+    <!-- Servicios adicionales -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto mb-10">
+      <div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-6 flex items-center justify-between hover:border-[#00B4D8] transition-colors cursor-pointer" onclick="document.getElementById('cotizacion').scrollIntoView({behavior:'smooth'})">
+        <div class="flex items-center gap-4">
+          <span class="material-symbols-outlined text-[#0A2540] text-2xl">build_circle</span>
+          <div>
+            <div class="font-semibold text-on-background">Accesorios y equipamiento</div>
+            <div class="text-xs text-on-surface-variant mt-0.5">Bombas, filtros, robots, cobertores, escaleras</div>
+          </div>
+        </div>
+        <span class="material-symbols-outlined text-outline">arrow_forward</span>
+      </div>
+      <div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-6 flex items-center justify-between hover:border-[#00B4D8] transition-colors cursor-pointer" onclick="document.getElementById('cotizacion').scrollIntoView({behavior:'smooth'})">
+        <div class="flex items-center gap-4">
+          <span class="material-symbols-outlined text-[#0A2540] text-2xl">cleaning_services</span>
+          <div>
+            <div class="font-semibold text-on-background">Mantenimiento y limpieza</div>
+            <div class="text-xs text-on-surface-variant mt-0.5">Química del agua, filtros y reparaciones</div>
+          </div>
+        </div>
+        <span class="material-symbols-outlined text-outline">arrow_forward</span>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href="#cotizacion" class="inline-flex items-center gap-2 px-8 py-4 bg-[#0077B6] hover:bg-[#00B4D8] text-white font-button text-button rounded-lg transition-colors shadow-lg">
+        Consultá por tu piscina ideal <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Cómo trabajamos -->
+<section class="py-[80px] bg-surface-container-lowest border-y border-surface-variant" id="comotrabajamos">
+  <div class="max-w-[1280px] mx-auto px-8">
+    <div class="text-center mb-16">
+      <h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Cómo trabajamos</h2>
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Un proceso claro y profesional desde el primer contacto hasta el primer chapuzón.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="relative flex flex-col items-center text-center">
+        <div class="w-16 h-16 bg-[#0077B6] text-white rounded-full flex items-center justify-center font-headline-md text-headline-md mb-6 z-10">1</div>
+        <h3 class="font-headline-md text-headline-md text-on-background mb-2">Consulta</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">Nos contactás, entendemos tus necesidades y visitamos el terreno.</p>
+        <div class="hidden md:block absolute top-8 left-1/2 w-full h-[2px] bg-surface-variant -z-0"></div>
+      </div>
+      <div class="relative flex flex-col items-center text-center">
+        <div class="w-16 h-16 bg-[#0A2540] text-white rounded-full flex items-center justify-center font-headline-md text-headline-md mb-6 z-10">2</div>
+        <h3 class="font-headline-md text-headline-md text-on-background mb-2">Presupuesto</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">Te presentamos un presupuesto detallado con diseño y materiales.</p>
+        <div class="hidden md:block absolute top-8 left-1/2 w-full h-[2px] bg-surface-variant -z-0"></div>
+      </div>
+      <div class="relative flex flex-col items-center text-center">
+        <div class="w-16 h-16 bg-[#0A2540] text-white rounded-full flex items-center justify-center font-headline-md text-headline-md mb-6 z-10">3</div>
+        <h3 class="font-headline-md text-headline-md text-on-background mb-2">Construcción</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">Ejecutamos la obra con nuestro equipo de expertos en los plazos acordados.</p>
+        <div class="hidden md:block absolute top-8 left-1/2 w-full h-[2px] bg-surface-variant -z-0"></div>
+      </div>
+      <div class="relative flex flex-col items-center text-center">
+        <div class="w-16 h-16 bg-[#0A2540] text-white rounded-full flex items-center justify-center font-headline-md text-headline-md mb-6 z-10">4</div>
+        <h3 class="font-headline-md text-headline-md text-on-background mb-2">Entrega</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">Te entregamos tu piscina lista para disfrutar con todas las garantías.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Testimonios -->
+<section class="py-[80px] bg-background" id="testimonios">
+  <div class="max-w-[1280px] mx-auto px-8">
+    <div class="text-center mb-16">
+      <h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Lo que dicen nuestros clientes</h2>
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container-lowest border border-surface-variant rounded-full text-on-surface-variant text-sm font-medium mt-2">
+        <span class="material-symbols-outlined text-yellow-400 text-sm">star</span>
+        4.6 de 5 basado en opiniones reales en Google
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-8 shadow-sm">
+        <div class="flex items-center gap-1 mb-4">
+          <span class="material-symbols-outlined text-yellow-400">star</span><span class="material-symbols-outlined text-yellow-400">star</span><span class="material-symbols-outlined text-yellow-400">star</span><span class="material-symbols-outlined text-yellow-400">star</span><span class="material-symbols-outlined text-yellow-400">star</span>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-6 italic">"Excelente atención y cumplimiento en los plazos. Mi piscina de fibra quedó perfecta en pocos días."</p>
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 bg-primary-fixed text-on-primary-fixed rounded-full flex items-center justify-center font-bold">C</div>
+          <div><p class="font-bold text-on-background text-sm">C. Cassel</p></div>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-8 shadow-sm">
+        <div class="flex items-center gap-1 mb-4">
+          <span class="material-symbols-outlined text-yellow-400">star</span><span class="material-symbols-outlined text-yellow-400">star</span><span class="material-symbols-outlined text-yellow-400">star</span><span class="material-symbols-outlined text-yellow-400">star</span><span class="material-symbols-outlined text-yellow-400">star</span>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-6 italic">"Profesionales de confianza. Nos asesoraron en todo el proceso de la piscina de hormigón en el Paraná Country Club. Muy recomendados."</p>
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 bg-primary-fixed text-on-primary-fixed rounded-full flex items-center justify-center font-bold">M</div>
+          <div><p class="font-bold text-on-background text-sm">Morgana Boldrini</p></div>
+        </div>
+      </div>
+      <div class="bg-surface-container-lowest border border-surface-variant rounded-xl p-8 shadow-sm">
+        <div class="flex items-center gap-1 mb-4">
+          <span class="material-symbols-outlined text-yellow-400">star</span><span class="material-symbols-outlined text-yellow-400">star</span><span class="material-symbols-outlined text-yellow-400">star</span><span class="material-symbols-outlined text-yellow-400">star</span><span class="material-symbols-outlined text-yellow-400">star</span>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-6 italic">"Muy buena calidad en los accesorios y el servicio postventa es impecable."</p>
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 bg-primary-fixed text-on-primary-fixed rounded-full flex items-center justify-center font-bold">G</div>
+          <div><p class="font-bold text-on-background text-sm">Cliente en Google</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-10">
+      <a href="https://maps.app.goo.gl/MVP2S9Gj5Y9uCVTX7" target="_blank" class="inline-flex items-center gap-2 text-[#0077B6] hover:text-[#00B4D8] font-button transition-colors">
+        <span class="material-symbols-outlined text-sm">open_in_new</span> Ver todas las reseñas en Google
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="py-[80px] bg-surface-container-lowest border-y border-surface-variant" id="galeria">
+  <div class="max-w-[1280px] mx-auto px-8">
+    <div class="text-center mb-16">
+      <span class="font-label-caps text-label-caps text-[#0077B6] uppercase block mb-3">Nuestros trabajos</span>
+      <h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Galería de proyectos</h2>
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Cada piscina es única. Mirá algunos de los proyectos que realizamos en Ciudad del Este y alrededores.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+      <div class="gallery-item relative overflow-hidden rounded-xl aspect-[4/3] cursor-pointer group" onclick="openLightbox(0)">
+        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=800&q=80" alt="Piscina de hormigón armado" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy"/>
+        <div class="absolute inset-0 bg-[#0A2540]/0 group-hover:bg-[#0A2540]/40 transition-all duration-300 flex items-center justify-center">
+          <span class="material-symbols-outlined text-white text-5xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">zoom_in</span>
+        </div>
+        <div class="absolute bottom-3 left-3 bg-[#0A2540]/80 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full">Hormigón Armado</div>
+      </div>
+      <div class="gallery-item relative overflow-hidden rounded-xl aspect-[4/3] cursor-pointer group" onclick="openLightbox(1)">
+        <img src="https://images.unsplash.com/photo-5il1bOS8oSc?auto=format&fit=crop&w=800&q=80" alt="Piscina de fibra de vidrio" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy"/>
+        <div class="absolute inset-0 bg-[#0A2540]/0 group-hover:bg-[#0A2540]/40 transition-all duration-300 flex items-center justify-center">
+          <span class="material-symbols-outlined text-white text-5xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">zoom_in</span>
+        </div>
+        <div class="absolute bottom-3 left-3 bg-[#0A2540]/80 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full">Fibra de Vidrio</div>
+      </div>
+      <div class="gallery-item relative overflow-hidden rounded-xl aspect-[4/3] cursor-pointer group" onclick="openLightbox(2)">
+        <img src="https://images.unsplash.com/photo-jhJ6WIGW_80?auto=format&fit=crop&w=800&q=80" alt="Piscina de tela armada impermeable" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy"/>
+        <div class="absolute inset-0 bg-[#0A2540]/0 group-hover:bg-[#0A2540]/40 transition-all duration-300 flex items-center justify-center">
+          <span class="material-symbols-outlined text-white text-5xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">zoom_in</span>
+        </div>
+        <div class="absolute bottom-3 left-3 bg-[#0A2540]/80 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full">Tela Armada / Impermeable</div>
+      </div>
+      <div class="gallery-item relative overflow-hidden rounded-xl aspect-[4/3] cursor-pointer group" onclick="openLightbox(3)">
+        <img src="https://images.unsplash.com/photo-1578301978018-3005759f48f7?auto=format&fit=crop&w=800&q=80" alt="Piscina con revestimiento cerámico" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy"/>
+        <div class="absolute inset-0 bg-[#0A2540]/0 group-hover:bg-[#0A2540]/40 transition-all duration-300 flex items-center justify-center">
+          <span class="material-symbols-outlined text-white text-5xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">zoom_in</span>
+        </div>
+        <div class="absolute bottom-3 left-3 bg-[#0A2540]/80 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full">Revestimiento Cerámico</div>
+      </div>
+      <div class="gallery-item relative overflow-hidden rounded-xl aspect-[4/3] cursor-pointer group" onclick="openLightbox(4)">
+        <img src="https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=800&q=80" alt="Piscina residencial" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy"/>
+        <div class="absolute inset-0 bg-[#0A2540]/0 group-hover:bg-[#0A2540]/40 transition-all duration-300 flex items-center justify-center">
+          <span class="material-symbols-outlined text-white text-5xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">zoom_in</span>
+        </div>
+        <div class="absolute bottom-3 left-3 bg-[#0A2540]/80 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full">Residencial</div>
+      </div>
+      <div class="gallery-item relative overflow-hidden rounded-xl aspect-[4/3] cursor-pointer group" onclick="openLightbox(5)">
+        <img src="https://images.unsplash.com/photo-uvBRncKJcv0?auto=format&fit=crop&w=800&q=80" alt="Piscina con iluminación nocturna LED" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy"/>
+        <div class="absolute inset-0 bg-[#0A2540]/0 group-hover:bg-[#0A2540]/40 transition-all duration-300 flex items-center justify-center">
+          <span class="material-symbols-outlined text-white text-5xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">zoom_in</span>
+        </div>
+        <div class="absolute bottom-3 left-3 bg-[#0A2540]/80 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full">Iluminación Nocturna</div>
+      </div>
+      <div class="gallery-item relative overflow-hidden rounded-xl aspect-[4/3] cursor-pointer group" onclick="openLightbox(6)">
+        <img src="https://images.unsplash.com/photo-gySBCioQkoo?auto=format&fit=crop&w=800&q=80" alt="Piscina con escalones integrados" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy"/>
+        <div class="absolute inset-0 bg-[#0A2540]/0 group-hover:bg-[#0A2540]/40 transition-all duration-300 flex items-center justify-center">
+          <span class="material-symbols-outlined text-white text-5xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">zoom_in</span>
+        </div>
+        <div class="absolute bottom-3 left-3 bg-[#0A2540]/80 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full">Escalones Integrados</div>
+      </div>
+      <div class="gallery-item relative overflow-hidden rounded-xl aspect-[4/3] cursor-pointer group" onclick="openLightbox(7)">
+        <img src="https://images.unsplash.com/photo-18fiR0i22r8?auto=format&fit=crop&w=800&q=80" alt="Piscina con cascada" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy"/>
+        <div class="absolute inset-0 bg-[#0A2540]/0 group-hover:bg-[#0A2540]/40 transition-all duration-300 flex items-center justify-center">
+          <span class="material-symbols-outlined text-white text-5xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">zoom_in</span>
+        </div>
+        <div class="absolute bottom-3 left-3 bg-[#0A2540]/80 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full">Con Cascada</div>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="https://www.instagram.com/emporiodelaspiscinas/" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 text-white font-button text-button rounded-lg transition-all duration-300 shadow-lg hover:opacity-90 hover:scale-105" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 flex-shrink-0"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        Ver más fotos en Instagram
+      </a>
+      <a href="https://maps.app.goo.gl/MVP2S9Gj5Y9uCVTX7" target="_blank" class="inline-flex items-center gap-2 px-8 py-4 border-2 border-[#0A2540] text-[#0A2540] font-button text-button rounded-lg hover:bg-[#0A2540] hover:text-white transition-all duration-300">
+        <span class="material-symbols-outlined text-sm">photo_library</span> Ver en Google Maps
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="fixed inset-0 bg-black/92 z-[200] hidden items-center justify-center p-4" onclick="closeLightbox()">
+  <button class="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors" onclick="closeLightbox()">
+    <span class="material-symbols-outlined text-4xl">close</span>
+  </button>
+  <button class="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-white/10 rounded-full p-3 hover:bg-white/25 transition-colors" onclick="event.stopPropagation();prevImage()">
+    <span class="material-symbols-outlined text-3xl">arrow_back</span>
+  </button>
+  <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[85vh] object-contain rounded-xl shadow-2xl"/>
+  <button class="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-white/10 rounded-full p-3 hover:bg-white/25 transition-colors" onclick="event.stopPropagation();nextImage()">
+    <span class="material-symbols-outlined text-3xl">arrow_forward</span>
+  </button>
+  <div class="absolute bottom-4 text-white/60 text-sm" id="lightbox-counter"></div>
+</div>
+
+<!-- 7. Contact Section -->
+<section class="py-[80px] bg-background border-y border-surface-variant" id="contacto">
+  <div class="max-w-[1280px] mx-auto px-8">
+    <div class="text-center mb-16">
+      <h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Visitanos o contactanos</h2>
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">Estamos en Ciudad del Este, listos para asesorarte en tu próximo proyecto.</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div class="space-y-6">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-primary-fixed/20 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-[#0077B6]">location_on</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-on-background mb-1">Dirección</h4>
+            <p class="font-body-md text-body-md text-on-surface-variant">Avda. Monseñor Rodríguez (Ruta PY02), Km 3.5 a 4, Ciudad del Este</p>
+            <a href="https://maps.app.goo.gl/MVP2S9Gj5Y9uCVTX7" target="_blank" class="text-[#0077B6] text-sm hover:underline inline-flex items-center gap-1 mt-1">
+              <span class="material-symbols-outlined text-sm">open_in_new</span> Abrir en Google Maps
+            </a>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-primary-fixed/20 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-[#0077B6]">schedule</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-on-background mb-1">Horario</h4>
+            <p class="font-body-md text-body-md text-on-surface-variant">Lun-Vie 07:30–17:30<br/>Sáb 07:30–12:00</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-primary-fixed/20 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-[#0077B6]">phone</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-on-background mb-1">Teléfono / WhatsApp</h4>
+            <a class="font-body-md text-body-md text-[#0077B6] hover:text-[#00B4D8] transition-colors" href="https://wa.me/595973744427?text=Hola%20Emp%C3%B3rio%20de%20las%20Piscinas%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto." target="_blank">0973 744427</a>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-primary-fixed/20 rounded-full flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-[#0077B6]">share</span>
+          </div>
+          <div>
+            <h4 class="font-bold text-on-background mb-2">Redes sociales</h4>
+            <div class="flex gap-3">
+              <a href="https://www.facebook.com" target="_blank" class="w-10 h-10 bg-[#1877F2] rounded-full flex items-center justify-center text-white hover:opacity-80 transition-opacity" title="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/emporiodelaspiscinas/" target="_blank" class="w-10 h-10 rounded-full flex items-center justify-center text-white hover:opacity-80 transition-opacity" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)" title="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Google Maps embed -->
+      <div class="rounded-xl overflow-hidden border border-surface-variant shadow-sm" style="min-height:400px;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.2867!2d-54.6495554!3d-25.50888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f685623415f3cd%3A0xc849abaa5adce243!2sEmp%C3%B3rio%20de%20las%20Piscinas!5e0!3m2!1ses!2spy!4v1714780000000!5m2!1ses!2spy"
+          width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Ubicación Empório de las Piscinas">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Central CTA -->
+<section class="py-[80px] bg-[#0A2540] relative overflow-hidden" id="cotizacion">
+  <div class="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-[#0077B6] rounded-full blur-[100px] opacity-50"></div>
+  <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-64 h-64 bg-[#00B4D8] rounded-full blur-[100px] opacity-30"></div>
+  <div class="max-w-[1280px] mx-auto px-8 relative z-10 text-center">
+    <h2 class="font-headline-display text-headline-display text-white mb-4">¿Listo para tener tu propia piscina?</h2>
+    <p class="font-body-lg text-body-lg text-slate-300 mb-10">Pedí tu cotización gratis hoy mismo. Te respondemos en menos de 24 horas.</p>
+    <form id="cta-form" class="max-w-4xl mx-auto bg-white rounded-xl p-8 shadow-2xl flex flex-col md:flex-row gap-4 items-end">
+      <div class="w-full text-left">
+        <label class="font-label-caps text-label-caps text-on-surface-variant block mb-2">Nombre Completo</label>
+        <input id="form-name" class="w-full border border-outline-variant rounded-lg focus:border-[#00B4D8] focus:ring focus:ring-[#00B4D8]/20 transition-colors bg-white h-12 px-4 text-on-background" placeholder="Juan Pérez" type="text"/>
+      </div>
+      <div class="w-full text-left">
+        <label class="font-label-caps text-label-caps text-on-surface-variant block mb-2">Teléfono</label>
+        <input id="form-phone" class="w-full border border-outline-variant rounded-lg focus:border-[#00B4D8] focus:ring focus:ring-[#00B4D8]/20 transition-colors bg-white h-12 px-4 text-on-background" placeholder="09XX XXX XXX" type="tel"/>
+      </div>
+      <div class="w-full text-left">
+        <label class="font-label-caps text-label-caps text-on-surface-variant block mb-2">Tipo de Piscina</label>
+        <select id="form-type" class="w-full border border-outline-variant rounded-lg focus:border-[#00B4D8] focus:ring focus:ring-[#00B4D8]/20 transition-colors bg-white h-12 px-4 text-on-background">
+          <option>Hormigón Armado</option><option>Fibra de Vidrio</option><option>Vinilo</option><option>Infinity Edge</option><option>Con Cascada/Fuente</option><option>Con Spa/Jacuzzi</option><option>Con Iluminación LED</option><option>Renovación de piscina existente</option><option>Aún no estoy seguro</option>
+        </select>
+      </div>
+      <button class="w-full md:w-auto px-8 h-12 bg-[#0077B6] hover:bg-[#00B4D8] text-white font-button text-button rounded-lg transition-colors whitespace-nowrap flex items-center justify-center gap-2" type="button" onclick="submitForm()">
+        Quiero mi cotización <span class="material-symbols-outlined text-sm">arrow_forward</span>
+      </button>
+    </form>
+    <div class="mt-8">
+      <a class="flex items-center justify-center gap-2 text-slate-300 font-body-md text-body-md hover:text-white transition-colors group" href="https://wa.me/595973744427?text=Hola%20Emp%C3%B3rio%20de%20las%20Piscinas%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto." target="_blank">
+        <span class="material-symbols-outlined text-[#00B4D8] group-hover:scale-110 transition-transform">chat</span>
+        <span>O escribinos directo al WhatsApp: <strong class="text-white underline underline-offset-4">0973 744427</strong></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-[80px] bg-surface-container-lowest border-y border-surface-variant" id="faq">
+  <div class="max-w-[1280px] mx-auto px-8">
+    <div class="text-center mb-16">
+      <span class="font-label-caps text-label-caps text-[#0077B6] uppercase block mb-3">Preguntas frecuentes</span>
+      <h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Todo lo que querés saber</h2>
+      <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">Respondemos las dudas más comunes antes de que las tengas.</p>
+    </div>
+    <div class="max-w-3xl mx-auto space-y-3">
+      <div class="bg-white border border-surface-variant rounded-xl overflow-hidden">
+        <button class="w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+          <span class="font-semibold text-on-background text-lg">¿Cuánto tiempo tarda la construcción?</span>
+          <span class="material-symbols-outlined text-[#0077B6] faq-icon flex-shrink-0 ml-4">expand_more</span>
+        </button>
+        <div class="faq-answer hidden px-6 pb-6 border-t border-surface-variant pt-4">
+          <p class="font-body-md text-body-md text-on-surface-variant">Piscinas de fibra: <strong>3 a 7 días</strong>. Vinilo: <strong>1 a 2 semanas</strong>. Hormigón: <strong>4 a 6 semanas</strong> según tamaño y complejidad.</p>
+        </div>
+      </div>
+      <div class="bg-white border border-surface-variant rounded-xl overflow-hidden">
+        <button class="w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+          <span class="font-semibold text-on-background text-lg">¿La cotización realmente es gratis?</span>
+          <span class="material-symbols-outlined text-[#0077B6] faq-icon flex-shrink-0 ml-4">expand_more</span>
+        </button>
+        <div class="faq-answer hidden px-6 pb-6 border-t border-surface-variant pt-4">
+          <p class="font-body-md text-body-md text-on-surface-variant">Sí, 100% gratis y sin compromiso. Visitamos tu terreno, evaluamos las condiciones y te entregamos un presupuesto detallado con materiales, plazos y garantías.</p>
+        </div>
+      </div>
+      <div class="bg-white border border-surface-variant rounded-xl overflow-hidden">
+        <button class="w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+          <span class="font-semibold text-on-background text-lg">¿Hacen mantenimiento de piscinas?</span>
+          <span class="material-symbols-outlined text-[#0077B6] faq-icon flex-shrink-0 ml-4">expand_more</span>
+        </button>
+        <div class="faq-answer hidden px-6 pb-6 border-t border-surface-variant pt-4">
+          <p class="font-body-md text-body-md text-on-surface-variant">Sí. Ofrecemos limpieza periódica, control de química del agua, revisión de filtros y bombas. También hacemos reparaciones y renovaciones de piscinas existentes.</p>
+        </div>
+      </div>
+      <div class="bg-white border border-surface-variant rounded-xl overflow-hidden">
+        <button class="w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+          <span class="font-semibold text-on-background text-lg">¿Qué garantía ofrecen?</span>
+          <span class="material-symbols-outlined text-[#0077B6] faq-icon flex-shrink-0 ml-4">expand_more</span>
+        </button>
+        <div class="faq-answer hidden px-6 pb-6 border-t border-surface-variant pt-4">
+          <p class="font-body-md text-body-md text-on-surface-variant">Todas las construcciones incluyen garantía por defectos de mano de obra y materiales. Las piscinas de fibra cuentan además con garantía del fabricante. Los términos se detallan en el contrato.</p>
+        </div>
+      </div>
+      <div class="bg-white border border-surface-variant rounded-xl overflow-hidden">
+        <button class="w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+          <span class="font-semibold text-on-background text-lg">¿Trabajan fuera de Ciudad del Este?</span>
+          <span class="material-symbols-outlined text-[#0077B6] faq-icon flex-shrink-0 ml-4">expand_more</span>
+        </button>
+        <div class="faq-answer hidden px-6 pb-6 border-t border-surface-variant pt-4">
+          <p class="font-body-md text-body-md text-on-surface-variant">Nuestra base es Ciudad del Este y el Alto Paraná, pero trabajamos en toda la región este del país. Para proyectos en otras zonas, consultanos directamente.</p>
+        </div>
+      </div>
+      <div class="bg-white border border-surface-variant rounded-xl overflow-hidden">
+        <button class="w-full flex items-center justify-between p-6 text-left" onclick="toggleFaq(this)">
+          <span class="font-semibold text-on-background text-lg">¿Cuáles son las formas de pago?</span>
+          <span class="material-symbols-outlined text-[#0077B6] faq-icon flex-shrink-0 ml-4">expand_more</span>
+        </button>
+        <div class="faq-answer hidden px-6 pb-6 border-t border-surface-variant pt-4">
+          <p class="font-body-md text-body-md text-on-surface-variant">Aceptamos efectivo y transferencia bancaria. Contamos con planes de financiación. Los detalles se coordinan al momento de confirmar el presupuesto.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-white w-full border-t border-slate-200">
+  <div class="max-w-[1280px] mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <div>
+      <div class="font-bold text-[#0A2540] text-lg mb-4 uppercase tracking-tighter">Empório de las Piscinas</div>
+      <p class="font-manrope text-xs leading-relaxed text-slate-500 mb-4">Tu piscina soñada, construida por expertos en Ciudad del Este. Precisión, ingeniería y diseño sereno para tu hogar.</p>
+      <div class="flex gap-3">
+        <a href="https://www.facebook.com" target="_blank" class="w-9 h-9 bg-[#1877F2] rounded-full flex items-center justify-center text-white hover:opacity-80 transition-opacity" title="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/emporiodelaspiscinas/" target="_blank" class="w-9 h-9 rounded-full flex items-center justify-center text-white hover:opacity-80 transition-opacity" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)" title="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="https://wa.me/595973744427" target="_blank" class="w-9 h-9 bg-[#25D366] rounded-full flex items-center justify-center text-white hover:opacity-80 transition-opacity" title="WhatsApp">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-label-caps text-label-caps text-slate-500 mb-4 uppercase">Servicios</h4>
+      <ul class="space-y-2">
+        <li><a class="font-manrope text-xs text-slate-500 hover:text-[#00B4D8] underline underline-offset-4 transition-colors" href="#servicios">Hormigón Armado</a></li>
+        <li><a class="font-manrope text-xs text-slate-500 hover:text-[#00B4D8] underline underline-offset-4 transition-colors" href="#servicios">Fibra de Vidrio</a></li>
+        <li><a class="font-manrope text-xs text-slate-500 hover:text-[#00B4D8] underline underline-offset-4 transition-colors" href="#servicios">Vinilo</a></li>
+        <li><a class="font-manrope text-xs text-slate-500 hover:text-[#00B4D8] underline underline-offset-4 transition-colors" href="#servicios">Infinity Edge</a></li>
+        <li><a class="font-manrope text-xs text-slate-500 hover:text-[#00B4D8] underline underline-offset-4 transition-colors" href="#servicios">Cascadas y Spa</a></li>
+        <li><a class="font-manrope text-xs text-slate-500 hover:text-[#00B4D8] underline underline-offset-4 transition-colors" href="#servicios">Iluminación LED</a></li>
+        <li><a class="font-manrope text-xs text-slate-500 hover:text-[#00B4D8] underline underline-offset-4 transition-colors" href="#servicios">Renovación de piscinas</a></li>
+        <li><a class="font-manrope text-xs text-slate-500 hover:text-[#00B4D8] underline underline-offset-4 transition-colors" href="#servicios">Mantenimiento y accesorios</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-label-caps text-label-caps text-slate-500 mb-4 uppercase">Contacto</h4>
+      <ul class="space-y-2 font-manrope text-xs text-slate-500">
+        <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[14px]">location_on</span> Avda. Monseñor Rodríguez (Ruta PY02), Km 3.5 a 4, CDE</li>
+        <li class="flex items-start gap-2">
+          <span class="material-symbols-outlined text-[14px]">phone</span>
+          <a href="https://wa.me/595973744427" target="_blank" class="hover:text-[#00B4D8] transition-colors">0973 744427</a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-label-caps text-label-caps text-slate-500 mb-4 uppercase">Horario</h4>
+      <ul class="space-y-2 font-manrope text-xs text-slate-500 mb-6">
+        <li>Lun-Vie 07:30–17:30</li>
+        <li>Sáb 07:30–12:00</li>
+        <li>Dom Cerrado</li>
+      </ul>
+      <a href="#cotizacion" class="inline-flex items-center gap-2 px-4 py-2 bg-[#0077B6] text-white text-xs font-medium rounded-lg hover:bg-[#00B4D8] transition-colors">
+        <span class="material-symbols-outlined text-sm">arrow_forward</span> Pedir cotización
+      </a>
+    </div>
+  </div>
+  <div class="max-w-[1280px] mx-auto px-8 py-6 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-4">
+    <p class="font-manrope text-xs text-slate-500">© 2025 Empório de las Piscinas. Ciudad del Este, Paraguay.</p>
+    <div class="flex gap-4">
+      <a class="font-manrope text-xs text-slate-400 hover:text-[#00B4D8] underline underline-offset-4" href="#">Política de privacidad</a>
+      <a class="font-manrope text-xs text-slate-400 hover:text-[#00B4D8] underline underline-offset-4" href="#">Términos</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/595973744427?text=Hola%20Emp%C3%B3rio%20de%20las%20Piscinas%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto." target="_blank"
+   class="fixed bottom-6 right-6 z-[150] flex items-center gap-3 bg-[#25D366] text-white font-medium px-5 py-3 rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.45)] hover:bg-[#128C7E] transition-all hover:scale-105 active:scale-95 group"
+   title="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 flex-shrink-0">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+  <span class="max-w-0 overflow-hidden group-hover:max-w-[100px] transition-all duration-300 whitespace-nowrap text-sm">Escribinos</span>
+</a>
+
+<!-- Scroll to top -->
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+  class="fixed bottom-6 left-6 z-[150] w-12 h-12 bg-[#0A2540] text-white rounded-full shadow-lg hidden items-center justify-center hover:bg-[#0077B6] transition-colors"
+  title="Volver arriba">
+  <span class="material-symbols-outlined">arrow_upward</span>
+</button>
+
+<!-- Mobile menu overlay -->
+<div id="mobile-overlay" class="fixed inset-0 bg-black/60 z-[90] hidden" onclick="closeMobileMenu()"></div>
+<div id="mobile-panel" class="fixed top-0 right-0 h-full w-[280px] bg-white z-[95] shadow-2xl translate-x-full transition-transform duration-300 flex flex-col p-8 pt-20">
+  <button class="absolute top-5 right-5 text-[#0A2540]" onclick="closeMobileMenu()">
+    <span class="material-symbols-outlined text-2xl">close</span>
+  </button>
+  <nav class="flex flex-col space-y-5">
+    <a href="#servicios" onclick="closeMobileMenu()" class="font-manrope text-lg font-medium text-[#0A2540] hover:text-[#0077B6] transition-colors">Servicios</a>
+    <a href="#galeria" onclick="closeMobileMenu()" class="font-manrope text-lg font-medium text-[#0A2540] hover:text-[#0077B6] transition-colors">Galería</a>
+    <a href="#comotrabajamos" onclick="closeMobileMenu()" class="font-manrope text-lg font-medium text-[#0A2540] hover:text-[#0077B6] transition-colors">Cómo trabajamos</a>
+    <a href="#testimonios" onclick="closeMobileMenu()" class="font-manrope text-lg font-medium text-[#0A2540] hover:text-[#0077B6] transition-colors">Testimonios</a>
+    <a href="#faq" onclick="closeMobileMenu()" class="font-manrope text-lg font-medium text-[#0A2540] hover:text-[#0077B6] transition-colors">Preguntas</a>
+    <a href="#contacto" onclick="closeMobileMenu()" class="font-manrope text-lg font-medium text-[#0A2540] hover:text-[#0077B6] transition-colors">Contacto</a>
+    <a href="#cotizacion" onclick="closeMobileMenu()" class="mt-4 inline-flex items-center justify-center px-6 py-3 bg-[#0077B6] text-white font-medium rounded-lg hover:bg-[#00B4D8] transition-colors text-center">
+      Pedir cotización gratis
+    </a>
+  </nav>
+</div>
+
+<script>
+  // Mobile menu
+  function openMobileMenu() {
+    document.getElementById('mobile-overlay').classList.remove('hidden');
+    document.getElementById('mobile-panel').classList.remove('translate-x-full');
+    document.getElementById('mobile-panel').classList.add('translate-x-0');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobileMenu() {
+    document.getElementById('mobile-overlay').classList.add('hidden');
+    document.getElementById('mobile-panel').classList.add('translate-x-full');
+    document.getElementById('mobile-panel').classList.remove('translate-x-0');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('menu-btn').addEventListener('click', openMobileMenu);
+
+  // Scroll to top
+  window.addEventListener('scroll', () => {
+    const btn = document.getElementById('scroll-top');
+    if (window.scrollY > 500) {
+      btn.classList.remove('hidden'); btn.classList.add('flex');
+    } else {
+      btn.classList.add('hidden'); btn.classList.remove('flex');
+    }
+  });
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const icon = btn.querySelector('.faq-icon');
+    const isOpen = !answer.classList.contains('hidden');
+    document.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
+    document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = '');
+    if (!isOpen) {
+      answer.classList.remove('hidden');
+      icon.style.transform = 'rotate(180deg)';
+    }
+  }
+
+  // Gallery lightbox
+  const galleryImages = [
+    { src: 'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1400&q=90', alt: 'Hormigón Armado' },
+    { src: 'https://images.unsplash.com/photo-5il1bOS8oSc?auto=format&fit=crop&w=1400&q=90', alt: 'Fibra de Vidrio' },
+    { src: 'https://images.unsplash.com/photo-jhJ6WIGW_80?auto=format&fit=crop&w=1400&q=90', alt: 'Tela Armada / Impermeable' },
+    { src: 'https://images.unsplash.com/photo-1578301978018-3005759f48f7?auto=format&fit=crop&w=1400&q=90', alt: 'Revestimiento Cerámico' },
+    { src: 'https://images.unsplash.com/photo-1563911302283-d2bc129e7570?auto=format&fit=crop&w=1400&q=90', alt: 'Residencial' },
+    { src: 'https://images.unsplash.com/photo-uvBRncKJcv0?auto=format&fit=crop&w=1400&q=90', alt: 'Iluminación Nocturna' },
+    { src: 'https://images.unsplash.com/photo-gySBCioQkoo?auto=format&fit=crop&w=1400&q=90', alt: 'Escalones Integrados' },
+    { src: 'https://images.unsplash.com/photo-18fiR0i22r8?auto=format&fit=crop&w=1400&q=90', alt: 'Con Cascada' }
+  ];
+  let currentImg = 0;
+
+  function openLightbox(idx) {
+    currentImg = idx;
+    updateLightbox();
+    const lb = document.getElementById('lightbox');
+    lb.classList.remove('hidden'); lb.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    const lb = document.getElementById('lightbox');
+    lb.classList.add('hidden'); lb.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+  function nextImage() { currentImg = (currentImg + 1) % galleryImages.length; updateLightbox(); }
+  function prevImage() { currentImg = (currentImg - 1 + galleryImages.length) % galleryImages.length; updateLightbox(); }
+  function updateLightbox() {
+    document.getElementById('lightbox-img').src = galleryImages[currentImg].src;
+    document.getElementById('lightbox-img').alt = galleryImages[currentImg].alt;
+    document.getElementById('lightbox-counter').textContent = (currentImg + 1) + ' / ' + galleryImages.length;
+  }
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('hidden')) {
+      if (e.key === 'ArrowRight') nextImage();
+      if (e.key === 'ArrowLeft') prevImage();
+      if (e.key === 'Escape') closeLightbox();
+    }
+  });
+
+  // Scroll reveal
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        revealObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('section h2, section h3').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(22px)';
+    el.style.transition = 'opacity 0.65s ease, transform 0.65s ease';
+    revealObs.observe(el);
+  });
+
+  // Form → WhatsApp
+  function submitForm() {
+    const name = document.getElementById('form-name').value.trim();
+    const phone = document.getElementById('form-phone').value.trim();
+    const type = document.getElementById('form-type').value;
+    if (!name || !phone) { alert('Por favor completá tu nombre y teléfono.'); return; }
+    const msg = encodeURIComponent('Hola Empório de las Piscinas! Soy ' + name + ', mi teléfono es ' + phone + ' y me interesa una piscina de ' + type + '. Quisiera solicitar una cotización gratuita.');
+    window.open('https://wa.me/595973744427?text=' + msg, '_blank');
+  }
+</script>
+</body></html>
